@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>HHONORS</title>
+    <!-- DOUBLECLICK ENABLER -->
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+    <script>
+        Enabler.setExpandingPixelOffsets(0, 0, 970, 403);
+        // Enabler.setStartExpanded(true);
+
+        var body_element;
+
+        function script_start(){
+           var mainScript = document.createElement("script");
+               mainScript.src = "code/script-min.js";
+               body_element.appendChild(mainScript);
+        }
+
+        function load_libraries(){
+            body_element = document.getElementsByTagName("body")[0];
+
+            //++++++ IF ALL GREENSOCK IS LOADED THEN RUN MAIN SCRIPT ++++++
+            var lib_loaded = 0;
+            function lib_checker(){
+                console.log("lib_loaded " + lib_loaded);
+                lib_loaded +=1;
+                if (lib_loaded === lib_length ){
+                    script_start();
+                }
+            }
+
+            //++++++ GREENSOCK ++++++
+            var TweenLite = document.createElement("script"),
+                CSSPlugin = document.createElement("script");
+                EasePack = document.createElement("script");
+
+            TweenLite.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenLite.min.js";
+            CSSPlugin.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/CSSPlugin.min.js";
+            EasePack.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js";
+
+            body_element.appendChild(TweenLite);
+            body_element.appendChild(CSSPlugin);
+            body_element.appendChild(EasePack);
+
+
+            var lib_list = [TweenLite, CSSPlugin, EasePack];
+            var i = 0;
+            var lib_length = lib_list.length;
+
+            for (i; i < lib_length; i++ ) {
+                lib_list[i].addEventListener("load", lib_checker );
+            }
+        }
+
+        // Runs when Enabler is ready.
+        function load_script() {
+          if (Enabler.isPageLoaded()) {
+            load_libraries();
+          } else {
+            Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, load_libraries);
+          }
+        }
+
+        window.onload = function() {
+            if (Enabler.isInitialized()) {
+               load_script();
+            } else {
+                Enabler.addEventListener(studio.events.StudioEvent.INIT, load_script);
+            }
+        };
+
+    </script>
+    <link rel="stylesheet" href="code/style-min.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="panel_collapsed">
+
+            <!-- BANNER BG COPY AND SWIPE -->
+            <div id="col_bg1" class="bg"><img id="col_bg1_img" src="" alt=""></div>
+
+            <div id="col_copy_container_01" class="copy_container">
+              <div id="col_text1_1" class="copy" ><img id="col_text1_1_img" src="" alt=""></div>
+            </div>
+            <div id="col_swipe1" class="mask-swipe">
+              <div id="col_script1" class="copy" ><img id="col_script1_img" src="" alt=""></div>
+            </div>
+            <!-- BANNER BG COPY AND SWIPE END -->
+
+            <!-- EXPAND BUTTON -->
+            <div><img id="col_btn_img" src="" alt=""></div>
+
+            <div id="col_border"></div>
+        </div>
+
+        <div id="panel_expanded">
+            <div id="exp_bg3" class="bg"><img id="exp_bg3_img" src="" alt=""></div>
+            <div id="exp_bg2" class="bg"><img id="exp_bg2_img" src="" alt=""></div>
+            <div id="exp_bg1" class="bg"><img id="exp_bg1_img" src="" alt=""></div>
+
+            <div id="cta_over">
+              <div id="cta_shimmer">
+                <img id="shimmer_img" src="images/cta_shimmer.png" alt="">
+              </div>
+            </div>
+
+
+            <div id="exp_logo_cta"><img id="exp_logo_cta_img" src="" alt=""></div>
+            <div id="terms"><img id="terms_img" src="" alt=""></div>
+
+
+            <div id="exp_copy_container_01" class="copy_container">
+              <div id="exp_text1_1" class="copy" ><img id="exp_text1_1_img" src=""></div>
+            </div>
+            <div id="exp_swipe1" class="mask-swipe">
+              <div class="copy" ><img id="script1_img" src=""></div>
+            </div>
+
+            <div id="exp_copy_container_02" class="copy_container">
+              <div id="exp_text2_1" class="copy" ><img id="exp_text2_1_img" src=""></div>
+            </div>
+            <div id="exp_swipe2" class="mask-swipe">
+              <div class="copy" ><img id="script2_img" src=""></div>
+            </div>
+
+            <div id="exp_copy_container_03" class="copy_container">
+                <div id="exp_text3_1" class="copy" ><img id="exp_text3_1_img" src=""></div>
+            </div>
+            <div id="exp_swipe3" class="mask-swipe">
+                <div class="copy" ><img id="script3_img" src=""></div>
+            </div>
+            <div id="exp_copy_container_04" class="copy_container">
+                <div id="exp_text3_2" class="copy" ><img id="exp_text3_2_img" src=""></div>
+            </div>
+
+            <div id="exp_rollover"><img id="exp_rollover_img" src="" alt=""></div>
+
+            <div id="border"></div>
+
+            <!-- EXIT -->
+            <div id="bg_exit"></div>
+
+            <!-- VIDEO -->
+            <div id="video_container"></div>
+            <div id="play_btn"><img id="play_btn_img" src="" alt=""></div>
+
+             <!-- ROLLOVER BRANDBAR -->
+            <div id="brandbar_image"><img id="brandbar_img" src="" alt=""></div>
+
+            <div id="brandbar_hotspot"></div>
+            <div id="closeBtn"><img id="close_btn_img" src="" alt=""></div>
+
+            <div id="border_top" class="border"></div>
+            <div id="border_left" class="border"></div>
+            <div id="border_bottom" class="border"></div>
+            <div id="border_right" class="border"></div>
+        </div>
+        <div id="chromeCover"></div>
+
+    </div>
+    <!--container-ends-->
+</body>
+
+</html>

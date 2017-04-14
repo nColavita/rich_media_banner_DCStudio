@@ -1,0 +1,228 @@
+$banner_width: 970px;
+$banner_height: 90px;
+$exp_width: 970px;
+$exp_height: 403px;
+
+body, html, body, * {
+	margin: 0px;
+	padding: 0px;
+	border: 0;
+}
+#container {
+	position: absolute;
+	overflow: hidden;
+	cursor: pointer;
+	z-index: 40; /* LIVE NATION SPEC */
+	top: 0px;
+	left: 0px;
+	width: $exp_width;
+	height: $exp_height;
+
+	> div {
+		position: absolute;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+#panel_collapsed {
+	> div img {
+
+	}
+}
+
+#chromeCover {
+	width: $banner_width - 2px;
+	height: $banner_height - 2px;
+	border: 1px solid #0c121c;
+	background-image: url("../images/logo.png");
+	background-repeat: no-repeat;
+	background-size: 117px 42px;
+	background-position: 50% 50%;
+	background-color: #00b5e2;
+	position: absolute;
+	top: 0px;
+}
+#panel_collapsed {
+	width: $banner_width;
+	height: $banner_height;
+	position: absolute;
+	overflow: hidden;
+	top: 0px;
+
+	> div {
+		position: absolute;
+		width: $banner_width;
+		height: $banner_height;
+	}
+}
+#panel_expanded {
+	position: absolute;
+	overflow: hidden;
+	cursor: pointer;
+	top: 0px;
+	left: 0px;
+	width: $exp_width;
+	height: $exp_height;
+	display: none;
+
+	> div {
+		position: absolute;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+#bg_exit{
+	width: $exp_width;
+	height: $exp_height;
+}
+
+#exp_border {
+	width: $exp_width - 2px;
+	height: $exp_height - 2px;
+	border: 1px solid #0c121c;
+	background-color: transparent;
+}
+#col_border{
+	width: $banner_width - 2px !important;
+	height: $banner_height - 2px !important;
+	border: 1px solid #0c121c;
+	background-color: transparent;
+}
+
+#cta_over {
+	background-color: #00b5e2;
+	overflow: hidden;
+    width: 140px !important;
+    height: 50px !important;
+    top: 311px;
+    left: 422px;
+}
+
+#brandbar_image img {
+	z-index: 2;
+}
+
+#exp_rollover, #brandbar_hotspot {
+	position: absolute;
+    bottom: -1px;
+    left: 404px;
+    width: 168px !important;
+    height: 38px !important;
+	img {
+		position: absolute;
+		width: 100% !important;
+		height: 100% !important;
+	}             
+} 
+
+#copy_container_02 {
+	height: 160px !important;
+	overflow: hidden;
+}
+
+#copy_container_01 div, #copy_container_02 div {
+	position: absolute;
+	top: 0px;
+}
+
+ /*+++++++++++++++++++++++++++++++++++++++*/
+/* ADJUST IF NECCESARY   */
+/*+++++++++++++++++++++++++++++++++++++++*/
+
+.mask-swipe {
+	overflow: hidden;
+	> div {
+		width: $banner_width;
+	}
+	img {
+		width: 100%; /* banner width */
+	}
+}
+
+#col_copy_container_01 {
+	top: 34px;
+}
+
+#exp_copy_container_01 {
+	top: 87px;
+}
+
+#exp_copy_container_02 {
+	top: 86px;
+}
+
+#exp_copy_container_03 {
+	top: 66px;
+}
+
+#exp_copy_container_04 {
+	top: 231px;
+}
+
+.copy_container img {
+	width: 100%;
+	display: block;
+}
+
+#cta_shimmer, #cta_shimmer img {
+	height: 100%;
+}
+
+#cta_shimmer img {
+	height: 50px;
+}
+
+#logo_cta img {
+	height: 100%;
+}
+
+#video_container, #play_btn{
+  position: absolute;
+  width: 356px !important;
+  height: 200px !important;
+  top: 80px;
+  left: 50px;
+  background-size: 356px 200px;
+}
+
+#closeBtn {
+	width: 63px;
+	height: 12px;
+	top: 12px;
+	right: 12px
+}
+
+#border_top, #border_left, #border_bottom, #border_right {
+	background-color: #000000;
+	position: absolute;
+}
+
+#border_top, #border_bottom {
+	width: $exp_width;
+	height: 1px;
+}
+
+#border_right, #border_left {
+	height: $exp_height;
+	width: 1px;
+}
+
+#border_right {
+	right: 0px;
+}
+
+#border_bottom {
+	top: $exp_height - 1px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	#play_btn{
+		display:none;
+	}
+}
